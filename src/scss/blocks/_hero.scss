@@ -1,45 +1,35 @@
 .hero {
 	position: relative;
-	background-color: var(--accent);
-	font-family: var(--font-accent);
-	padding-top: 40px;
+
+	.container {
+		padding: 130px 160px;
+		border-radius: 500px;
+		background-color: var(--accent-dark);
+	}
 
 	&__title {
+		font-family: var(--font-second);
 		width: 100%;
-		font-family: var(--font-accent);
-		font-weight: 700;
-		font-size: 164px;
+		font-weight: 500;
+		font-size: 120px;
 		line-height: 100%;
 		letter-spacing: -0.04em;
 		text-transform: uppercase;
-		color: var(--text-color-dark);
+		color: var(--text-color);
 		margin: 0 auto;
 		text-align: center;
 	}
 
 	&__subtitle {
-		max-width: 420px;
-		margin: 0 auto;
-		margin-bottom: 95px;
+		font-family: var(--font-accent);
 		font-weight: 500;
 		font-size: 18px;
 		line-height: 110%;
 		letter-spacing: -0.04em;
 		text-align: center;
-		color: rgba(21, 21, 21, 0.7);
-	}
-
-	&__bg {
-		width: 100%;
-		max-width: 1600px;
-		margin: 0 auto;
-		height: 386px;
-		background-color: #999;
-		background-image: url('../../img/hero/hero_bg.jpg');
-		background-position: center center;
-		/* x y */
-		background-size: cover;
-		background-repeat: no-repeat;
+		color: rgba(244, 248, 249, 0.8);
+		max-width: 238px;
+		margin: 35px auto;
 	}
 
 	@include mobile {
@@ -49,22 +39,47 @@
 		}
 
 		&__subtitle {
-			font-size: 14px;
+			font-size: 16px;
 			margin-bottom: 50px;
-			max-width: 250px;
+		}
+	}
+
+	.nav__btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 100%;
+		letter-spacing: -0.04em;
+		text-transform: uppercase;
+		height: 40px;
+		color: var(--accent-dark);
+		background-color: var(--accent);
+		padding: 0;
+		margin: 0 auto;
+
+		width: 300px;
+		border: 1px solid var(--accent);
+		border-radius: 100px;
+
+		&::before,
+		&::after {
+			display: none;
 		}
 
-		&__bg {
-			width: 100%;
-			max-width: 1600px;
-			margin: 0 auto;
-			height: 213px;
-			background-color: #999;
-			background-image: url('../../img/hero/hero_bg.jpg');
-			background-position: center center;
-			/* x y */
-			background-size: cover;
-			background-repeat: no-repeat;
+		&-text {
+			padding: 5px 10px;
+			color: var(--accent-dark);
+		}
+
+		&:hover {
+			background-color: var(--page-bg);
+		}
+
+		@include tablet {
+			display: none;
 		}
 	}
 
