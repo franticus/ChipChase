@@ -1,3 +1,3 @@
-# Celestia Studios
+# ChipChase
 
-[Deploy](https://franticus.github.io/ChipChase/)
+[Deploy ChipChase](https://franticus.github.io/ChipChase/)
