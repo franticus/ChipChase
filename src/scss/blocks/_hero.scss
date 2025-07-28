@@ -1,0 +1,150 @@
+.hero {
+	position: relative;
+	background-color: var(--accent);
+	font-family: var(--font-accent);
+	padding-top: 40px;
+
+	&__title {
+		width: 100%;
+		font-family: var(--font-accent);
+		font-weight: 700;
+		font-size: 164px;
+		line-height: 100%;
+		letter-spacing: -0.04em;
+		text-transform: uppercase;
+		color: var(--text-color-dark);
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	&__subtitle {
+		max-width: 420px;
+		margin: 0 auto;
+		margin-bottom: 95px;
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 110%;
+		letter-spacing: -0.04em;
+		text-align: center;
+		color: rgba(21, 21, 21, 0.7);
+	}
+
+	&__bg {
+		width: 100%;
+		max-width: 1600px;
+		margin: 0 auto;
+		height: 386px;
+		background-color: #999;
+		background-image: url('../../img/hero/hero_bg.jpg');
+		background-position: center center;
+		/* x y */
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	.cross {
+		position: absolute;
+		top: 0px;
+		left: 40px;
+		width: 30px;
+		height: 30px;
+
+		&::after {
+			content: '';
+			position: absolute;
+			width: 30px;
+			height: 1px;
+			background-color: var(--accent-dark);
+			transform: rotate(90deg);
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%) rotate(90deg);
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			width: 30px;
+			height: 1px;
+			background-color: var(--accent-dark);
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%)
+		}
+
+		&--right {
+			left: auto;
+			right: 40px;
+		}
+	}
+
+	@include mobile {
+		&__title {
+			font-size: 60px;
+			margin-bottom: 5px;
+		}
+
+		&__subtitle {
+			font-size: 14px;
+			margin-bottom: 50px;
+			max-width: 250px;
+		}
+
+		&__bg {
+			width: 100%;
+			max-width: 1600px;
+			margin: 0 auto;
+			height: 213px;
+			background-color: #999;
+			background-image: url('../../img/hero/hero_bg.jpg');
+			background-position: center center;
+			/* x y */
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+
+		.cross {
+			position: absolute;
+			top: -10px;
+			left: 10px;
+			width: 20px;
+			height: 20px;
+
+			&::after {
+				content: '';
+				position: absolute;
+				width: 20px;
+				height: 1px;
+				background-color: var(--accent-dark);
+				transform: rotate(90deg);
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%) rotate(90deg);
+			}
+
+			&::before {
+				content: '';
+				position: absolute;
+				width: 20px;
+				height: 1px;
+				background-color: var(--accent-dark);
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%)
+			}
+
+			&--right {
+				left: auto;
+				right: 10px;
+			}
+		}
+	}
+
+	.mobileHide {
+		display: none;
+
+		@include mobile {
+			display: block;
+		}
+	}
+}
