@@ -1,5 +1,4 @@
 .header {
-	background-color: #c0e4f4;
 	padding: 20px 0;
 	padding-bottom: 0;
 	font-family: var(--font-accent);
@@ -9,19 +8,6 @@
 		justify-content: space-between;
 		align-items: center;
 		padding-bottom: 20px;
-		border-bottom: 1px solid rgba(21, 21, 21, 0.3);
-	}
-
-	background-color: var(--accent);
-	// background-image: url('./../../img/komanda.jpg');
-	background-position: center center;
-	/* x y */
-	background-size: cover;
-	background-repeat: no-repeat;
-
-
-	@include mediaBg() {
-		// background-image: url('./../../img/komanda@2x.jpg');
 	}
 }
 
@@ -34,16 +20,4 @@
 .header__logo {
 	position: relative;
 	z-index: 999;
-
-	&--yellow {
-		display: none;
-	}
-}
-
-.no-scroll .header__logo--black {
-	display: none;
-}
-
-.no-scroll .header__logo--yellow {
-	display: inline-block;
 }
