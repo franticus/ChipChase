@@ -5,6 +5,41 @@
 		padding: 130px 160px;
 		border-radius: 500px;
 		background-color: var(--accent-dark);
+
+		@include tablet {
+			padding: 130px 90px;
+		}
+
+		@include mobile {
+			padding: 107px 50px;
+		}
+
+		@include mobile_small {
+			padding: 107px 10px;
+		}
+	}
+
+	.title__wrapper {
+		position: relative;
+		z-index: 3;
+		max-width: 100%;
+		margin: 0 auto;
+
+		@include tablet {
+			max-width: 80%;
+		}
+
+		@include mobile {
+			max-width: 100%;
+		}
+
+		@include mobile_small {
+			max-width: 80%;
+		}
+
+		@media (max-width: 360px) {
+			max-width: 100%;
+		}
 	}
 
 	&__title {
@@ -19,6 +54,21 @@
 		color: var(--text-color);
 		margin: 0 auto;
 		text-align: center;
+		z-index: 3;
+		padding: 0 25px;
+
+		span {
+			white-space: nowrap;
+		}
+
+		@include tablet {
+			font-size: 80px;
+		}
+
+		@include mobile {
+			font-size: 45px;
+			padding: 0 15px;
+		}
 	}
 
 	&__subtitle {
@@ -31,21 +81,16 @@
 		color: rgba(244, 248, 249, 0.8);
 		max-width: 238px;
 		margin: 35px auto;
-	}
 
-	@include mobile {
-		&__title {
-			font-size: 60px;
-			margin-bottom: 5px;
-		}
-
-		&__subtitle {
+		@include mobile {
 			font-size: 16px;
-			margin-bottom: 50px;
+			margin: 15px auto;
 		}
 	}
 
 	.element {
+		position: relative;
+		z-index: 2;
 
 		&__left {
 			position: absolute;
@@ -53,9 +98,9 @@
 			left: 0;
 			width: 20px;
 			height: 100%;
-			border-top: 5px solid rgba(244, 248, 249, 0.5);
+			border-top: 4px solid rgba(244, 248, 249, 0.5);
 			border-left: 5px solid rgba(244, 248, 249, 0.5);
-			border-bottom: 3px solid rgba(244, 248, 249, 0.5);
+			border-bottom: 4px solid rgba(244, 248, 249, 0.5);
 			border-radius: 20px;
 
 			&::after {
@@ -68,6 +113,12 @@
 				height: 110%;
 				background-color: var(--accent-dark);
 			}
+
+			@include mobile_small {
+				border-top: 2px solid rgba(244, 248, 249, 0.5);
+				border-left: 2px solid rgba(244, 248, 249, 0.5);
+				border-bottom: 2px solid rgba(244, 248, 249, 0.5);
+			}
 		}
 
 		&__right {
@@ -76,9 +127,9 @@
 			right: 0;
 			width: 20px;
 			height: 100%;
-			border-top: 5px solid rgba(244, 248, 249, 0.5);
+			border-top: 4px solid rgba(244, 248, 249, 0.5);
 			border-right: 5px solid rgba(244, 248, 249, 0.5);
-			border-bottom: 3px solid rgba(244, 248, 249, 0.5);
+			border-bottom: 4px solid rgba(244, 248, 249, 0.5);
 			border-radius: 20px;
 
 			&::after {
@@ -91,10 +142,16 @@
 				height: 110%;
 				background-color: var(--accent-dark);
 			}
+
+			@include mobile_small {
+				border-top: 2px solid rgba(244, 248, 249, 0.5);
+				border-right: 2px solid rgba(244, 248, 249, 0.5);
+				border-bottom: 2px solid rgba(244, 248, 249, 0.5);
+			}
 		}
 	}
 
-	.nav__btn {
+	.hero__btn {
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -110,7 +167,8 @@
 		padding: 0;
 		margin: 0 auto;
 
-		width: 300px;
+		width: 100%;
+		max-width: 300px;
 		border: 1px solid var(--accent);
 		border-radius: 100px;
 
@@ -126,10 +184,6 @@
 
 		&:hover {
 			background-color: var(--page-bg);
-		}
-
-		@include tablet {
-			display: none;
 		}
 	}
 
