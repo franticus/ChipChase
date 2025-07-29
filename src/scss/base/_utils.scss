@@ -39,10 +39,22 @@
 	justify-content: center;
 }
 
+.desktopOnly {
+	display: block;
+
+	@include tablet {
+		display: none;
+	}
+}
+
 .mobileOnly {
 	display: none;
 
 	@include mobile {
 		display: block;
 	}
+}
+
+.highlight {
+	color: var(--accent);
 }
