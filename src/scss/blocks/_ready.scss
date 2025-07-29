@@ -5,6 +5,7 @@
 	align-items: center;
 	justify-content: space-between;
 	gap: 20px;
+	overflow: hidden;
 
 	@include tablet {
 		flex-direction: column;
@@ -120,6 +121,8 @@
 		padding: 0;
 		margin: 0 auto;
 		transition: all 0.2s ease-in;
+		animation: pulse 3s linear infinite;
+		z-index: 3;
 
 		width: 100%;
 		max-width: 300px;
@@ -138,6 +141,48 @@
 		&:hover {
 			background-color: var(--page-bg);
 			color: var(--accent-dark);
+		}
+	}
+
+	.wave {
+		border: 1px solid var(--accent);
+		border-radius: 500px;
+		position: absolute;
+		z-index: 1;
+		width: 124%;
+		height: 100%;
+		animation: wave 3s linear infinite;
+
+		@include tablet {
+			animation: waveTablet 3s linear infinite;
+		}
+
+		@include mobile {
+			animation: waveMobile 3s linear infinite;
+		}
+
+		&-2 {
+			animation-delay: 0.5s;
+		}
+
+		&-3 {
+			animation-delay: 1s;
+		}
+
+		&-4 {
+			animation-delay: 1.5s;
+		}
+
+		&-5 {
+			animation-delay: 2s;
+		}
+
+		&-6 {
+			animation-delay: 2.5s;
+		}
+
+		&-7 {
+			animation-delay: 3s;
 		}
 	}
 }
