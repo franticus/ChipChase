@@ -1,0 +1,107 @@
+.ready {
+	font-family: var(--font-accent);
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	.rect {
+		background-color: var(--accent);
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 120%;
+		letter-spacing: -0.04em;
+		text-transform: uppercase;
+		color: var(--text-color-dark);
+		padding: 10px;
+		width: 360px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__content {
+		background-image: url('../../img/ready/circle.svg');
+		background-position: center center;
+		/* x y */
+		background-size: contain;
+		background-repeat: no-repeat;
+		width: 648px;
+		height: 648px;
+		max-width: 648px;
+		max-height: 648px;
+		margin: 0 auto;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+
+		&-title {
+			font-family: var(--font-second);
+			font-weight: 500;
+			font-size: 45px;
+			line-height: 110%;
+			letter-spacing: -0.04em;
+			text-transform: uppercase;
+			text-align: center;
+			color: #f4f8f9;
+
+			@include mobile {
+				font-size: 25px;
+				text-align: left;
+				margin: 20px auto;
+			}
+		}
+
+		&-text {
+			font-family: var(--font-accent);
+			font-weight: 500;
+			font-size: 18px;
+			line-height: 110%;
+			letter-spacing: -0.04em;
+			text-align: center;
+			color: rgba(244, 248, 249, 0.8);
+			max-width: 216px;
+			margin-top: 20px;
+			margin-bottom: 40px;
+
+			@include mobile {
+				font-size: 14px;
+			}
+		}
+	}
+
+	.ready__btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 100%;
+		letter-spacing: -0.04em;
+		text-transform: uppercase;
+		height: 40px;
+		color: var(--page-bg);
+		background-color: var(--accent-dark);
+		padding: 0;
+		margin: 0 auto;
+		transition: all 0.2s ease-in;
+
+		width: 100%;
+		max-width: 300px;
+		border: 1px solid var(--accent);
+		border-radius: 100px;
+
+		&::before,
+		&::after {
+			display: none;
+		}
+
+		&:hover {
+			background-color: var(--page-bg);
+			color: var(--accent-dark);
+		}
+	}
+}
