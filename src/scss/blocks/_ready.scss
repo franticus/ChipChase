@@ -30,7 +30,8 @@
 	}
 
 	&__content {
-		background-image: url('../../img/ready/circle.svg');
+		position: relative;
+		// background-image: url('../../img/ready/circle.svg');
 		background-position: center center;
 		/* x y */
 		background-size: contain;
@@ -58,6 +59,14 @@
 			min-height: 300px;
 		}
 
+		&-img {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			transform: rotate(0deg);
+			animation: rotate 10s linear infinite;
+		}
+
 		&-title {
 			font-family: var(--font-second);
 			font-weight: 500;
@@ -67,6 +76,7 @@
 			text-transform: uppercase;
 			text-align: center;
 			color: #f4f8f9;
+			z-index: 3;
 
 			@include mobile {
 				font-size: 25px;
@@ -84,6 +94,7 @@
 			max-width: 216px;
 			margin-top: 20px;
 			margin-bottom: 40px;
+			z-index: 3;
 
 			@include mobile {
 				font-size: 14px;
