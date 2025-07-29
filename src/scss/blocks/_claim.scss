@@ -42,13 +42,15 @@
 				padding: 0;
 				width: 168px;
 
+				animation: scrollBg 20s linear infinite;
+
 				@include media_900 {
 					width: 100%;
 					height: 180px;
 				}
 
 				@include mobile {
-					background-position: center top;
+					// background-position: center top;
 				}
 
 				&-1 {
