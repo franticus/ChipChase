@@ -4,6 +4,11 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	gap: 20px;
+
+	@include tablet {
+		flex-direction: column;
+	}
 
 	.rect {
 		background-color: var(--accent);
@@ -18,6 +23,10 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+
+		@include tablet {
+			width: 100%;
+		}
 	}
 
 	&__content {
@@ -37,6 +46,18 @@
 		justify-content: center;
 		flex-direction: column;
 
+		@include tablet {
+			width: 100%;
+			height: 100%;
+			min-width: 500px;
+			min-height: 500px;
+		}
+
+		@include mobile {
+			min-width: 300px;
+			min-height: 300px;
+		}
+
 		&-title {
 			font-family: var(--font-second);
 			font-weight: 500;
@@ -49,8 +70,6 @@
 
 			@include mobile {
 				font-size: 25px;
-				text-align: left;
-				margin: 20px auto;
 			}
 		}
 
@@ -68,6 +87,8 @@
 
 			@include mobile {
 				font-size: 14px;
+				margin-top: 10px;
+				margin-bottom: 20px;
 			}
 		}
 	}
@@ -93,6 +114,10 @@
 		max-width: 300px;
 		border: 1px solid var(--accent);
 		border-radius: 100px;
+
+		@include mobile {
+			max-width: 220px;
+		}
 
 		&::before,
 		&::after {
