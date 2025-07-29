@@ -21,6 +21,14 @@
     "description": "tablet"
   },
 
+  /* Media media_900 */
+  "media_900": {
+    "scope": "css,scss",
+    "prefix": "media_900",
+    "body": ["@include media_900 {", "    ${1}", "}"],
+    "description": "media_900"
+  },
+
   /* Media Mobile */
   "mediaMobile": {
     "scope": "css,scss",
