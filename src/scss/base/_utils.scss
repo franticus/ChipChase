@@ -38,3 +38,11 @@
 .flex-center {
 	justify-content: center;
 }
+
+.mobileOnly {
+	display: none;
+
+	@include mobile {
+		display: block;
+	}
+}
