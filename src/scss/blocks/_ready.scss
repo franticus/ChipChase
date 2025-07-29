@@ -191,5 +191,11 @@
 				}
 			}
 		}
+
+		@media (prefers-reduced-motion: reduce) {
+			.wave {
+				animation: none !important;
+			}
+		}
 	}
 }
