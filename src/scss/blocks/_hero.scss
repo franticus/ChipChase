@@ -166,7 +166,6 @@
 		background-color: var(--accent);
 		padding: 0;
 		margin: 0 auto;
-		animation: pulse 3s linear infinite;
 
 		width: 100%;
 		max-width: 300px;
@@ -179,13 +178,9 @@
 			display: none;
 		}
 
-		&-text {
-			padding: 5px 10px;
-			color: var(--accent-dark);
-		}
-
 		&:hover {
-			background-color: var(--page-bg);
+			background-color: var(--accent-dark);
+			color: var(--page-bg);
 		}
 	}
 

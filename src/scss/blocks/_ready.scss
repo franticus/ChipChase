@@ -24,6 +24,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		z-index: 3;
 
 		@include tablet {
 			width: 100%;
@@ -133,7 +134,6 @@
 		padding: 0;
 		margin: 0 auto;
 		transition: all 0.2s ease-in;
-		animation: pulse 3s linear infinite;
 		z-index: 3;
 
 		width: 100%;
@@ -151,7 +151,7 @@
 		}
 
 		&:hover {
-			background-color: var(--page-bg);
+			background-color: var(--accent);
 			color: var(--accent-dark);
 		}
 	}
